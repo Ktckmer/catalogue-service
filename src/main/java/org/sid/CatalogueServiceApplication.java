@@ -31,7 +31,7 @@ public class CatalogueServiceApplication {
 
             productRepository.deleteAll();
             Category c1 = categoryRepository.findById("C1").get();
-            Stream.of("P1", "P2", "P3", "P4").forEach(name->{
+            Stream.of("P2", "P2", "P3", "P4").forEach(name->{
                 productRepository.save(new Product(null, name, (1+ Math.random()*1000), c1));
             });
 
